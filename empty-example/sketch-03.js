@@ -7,6 +7,8 @@ function setup() {
 }
 
 function draw() {
+
+    background(mouseX, mouseY, Math.random(mouseX * mouseY) * 100);
     // NOTE: Color adjustments:
     //  - background(Red, Green, Blue, Alpha): background of canvas, defaults to white
     //      - If given one argument, it will do grayscale
@@ -20,7 +22,7 @@ function draw() {
     //  - strokeWeight(#):                     defines stroke size in pixels
     const smallSquare = (x, y, color = [255]) => {
         fill(...color);
-        return square(x, y, 20);
+        return square(mouseX + x, y, 20);
     };
     const largeSquare = (x, y, color = [255]) => {
         fill(...color);
@@ -35,4 +37,9 @@ function draw() {
     // mouseX - The mouse's X coordinate
     // mouseY - The mouse's Y coordinate
     circle(mouseX, mouseY, 50);
+}
+
+
+function mousePressed() {
+    background(mouseX, mouseY, Math.random(mouseX * mouseY) * 100);
 }
