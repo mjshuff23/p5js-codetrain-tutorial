@@ -1,7 +1,6 @@
 function setup() {
-  // put setup code here
-
-  // Art Canvas - arg1 = width, arg2 = height
+  // Art Canvas(width, height) - You should always set this, but if you don't, p5 will provide one
+  //  for you!
   createCanvas(200, 200);
 
   // Basically a console.log
@@ -9,17 +8,17 @@ function setup() {
 }
 
 function draw() {
-  // put drawing code here
-
   // Background Color - RGB
-  background(0);
+  // background(0);
 
-  // Rectangle - arg1 = x, arg2 = y, arg3 = width, arg4 = height
+  // Rectangle(x, y, width, height)
   rect(60, 50, 20, 20);
 
-  // Ellipse - arg1 = x, arg2 = y, arg3 = width, arg4 = height
+  // Ellipse(x, y, width, height)
   ellipse(200, 200, 50, 50);
 
+  // Line(x1, y1, x2, y2)
+  line(100, 100, 20, 10);
 
   // frameCount - A browser variable which shows the amount of frames passed through
   // print(frameCount);
