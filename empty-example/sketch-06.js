@@ -36,7 +36,6 @@ function draw() {
     pt.x = random(0, width);
     pt.y = random(0, height);
     fill(random(0, color.r), random(0, color.g), random(0, color.b), random(0, 255));
-    noStroke();
     ellipse(pt.x, pt.y, random(0, 100), random(0, 100));
 }
 
