@@ -1,4 +1,5 @@
 let x = 0;
+let speed = 3;
 
 function setup() {
     createCanvas(600, 400);
@@ -11,5 +12,13 @@ function draw() {
     noFill();
     ellipse(x, 200, 100, 100);
 
-    x += 3;
+    if (x > width) {
+        speed = -3;
+    }
+
+    if (x < 0) {
+        speed = 3;
+    }
+
+    x += speed;
 }
